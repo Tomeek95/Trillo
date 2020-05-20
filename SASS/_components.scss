@@ -120,3 +120,29 @@
         font-weight: 600;
     }
 }
+
+///////////////////////////
+//Side nav
+.side-nav {
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__icon {
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+}
+
+///////////////////////////
+//Side nav
+.legal {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--color-grey-light-4);
+    padding: 2.5rem;
+}
