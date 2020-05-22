@@ -34,21 +34,21 @@
 .hotel-view {
     flex: 1; // with flex: 1; we allow the element to take the width that left
     background-color: var(--color-white-1);
-    height: 80rem;
 }
 
 .detail {
     display: flex;
     padding: 4.5rem;
-    box-shadow: var(--shadow-light-1);
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
 }
 
 .description {
-    background-color: orangered;
+    font-size: 1.4rem;
     flex: 0 0 60%;
     margin-right: .5rem;
+    box-shadow: var(--shadow-light-1);
+    padding: 3rem;
 }
 
 .user-reviews {
