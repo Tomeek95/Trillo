@@ -427,16 +427,19 @@
         margin-right: .7rem;
 
         //older browsers
-        //background-image: url(../IMG/chevron-thin-right.svg); // this way it cannot be colored
-        //background-size: cover; // this is really useful, wihtout it, just a piece of the image is shown cuz it's larger
+        background-image: url(../IMG/chevron-thin-right.svg); // this way it cannot be colored
+        background-size: cover; // this is really useful, wihtout it, just a piece of the image is shown cuz it's larger
 
         //newer browsers - MASK
-        background-color: var(--color-primary);
-        -webkit-mask-image: url(../IMG/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
+        @supports ((-webkit-mask-image: url()) or (mask-image: url())) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../IMG/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../IMG/chevron-thin-right.svg);
 
-        mask-image: url(../IMG/chevron-thin-right.svg);
-        mask-size: cover;
+            mask-size: cover;
+            background-image: none;
+        }
     }
 }
 
