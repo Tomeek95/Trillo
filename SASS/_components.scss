@@ -14,6 +14,12 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__input {
         font-family: inherit;
         color: inherit;
@@ -29,6 +35,11 @@
             outline: none;
             width: 100%;
             background-color: var(--color-grey-light-3);
+
+            @media only screen and (max-width: $bp-smallest) {
+                background-color: var(--color-grey-light-2);
+                width: 95%;
+            }
         }
 
         &::-webkit-input-placeholder {
@@ -246,12 +257,25 @@
     align-items: center;
     border-bottom: 1px solid var(--color-grey-light-2);
 
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+    }
+
     &__heading {
         font-size: 2.25rem;
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 1rem 1rem;
+        }
     }
     &__stars {
         display: flex; //by default this svg elements are not aligned perfectly to center, but with disply: flex prop,
@@ -269,6 +293,12 @@
         font-size: 1.2rem;
         display: flex;
         vertical-align: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            order: 4;
+            width: 50%;
+            padding: .5rem 1rem;
+        }
     }
     &__icon-location {
         margin-right: .5rem;
@@ -284,13 +314,31 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            order: 2;
+        }
     }
     &__rating-avarage {
         font-size: 2.25rem;
         font-weight: .8rem;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+        }
     }
     &__rating-count {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: .5rem;
+        }
     }
 }
 
@@ -366,6 +414,10 @@
     &__item {
         flex: 0 0 50%;
         margin-bottom: .7rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            flex: 0 0 80%;
+        }
     }
     &__item:before {
         content: "";
